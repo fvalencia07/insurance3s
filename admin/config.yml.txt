@@ -1,19 +1,12 @@
-backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "img/uploads"
-public_folder: "/img/uploads"
-
 collections:
   - name: "home"
-    label: "Página principal"
+    label: "Página Principal"
     files:
-      - name: "home"
-        label: "Inicio"
-        file: "content/home.md"
+      - label: "Sección Principal"
+        name: "hero"
+        file: "content/home.json"
+        format: "json"
         fields:
-          - { label: "Título principal", name: "titulo_principal", widget: "string" }
+          - { label: "Título", name: "titulo", widget: "string" }
           - { label: "Subtítulo", name: "subtitulo", widget: "text" }
-          - { label: "Texto botón", name: "boton_texto", widget: "string" }
-          - { label: "Link botón", name: "boton_link", widget: "string" }
+          - { label: "Texto Botón", name: "boton", widget: "string" }
