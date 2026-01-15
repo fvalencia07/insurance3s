@@ -244,15 +244,6 @@
     </style>
 </head>
 	
-<script>
-fetch('/content/home.json')
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById('titulo').innerText = data.titulo;
-    document.getElementById('subtitulo').innerText = data.subtitulo;
-    document.getElementById('boton').innerText = data.boton;
-  });
-</script>
 
 	
 	
@@ -376,6 +367,17 @@ fetch('/content/home.json')
         </div>
     </div>
 </section>
+
+<script>
+fetch('/content/home.json')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('titulo').innerText = data.titulo;
+    document.getElementById('subtitulo').innerText = data.subtitulo;
+    document.getElementById('boton').innerText = data.boton;
+  });
+</script>
+	
 </body>
 
 <!-- ======= FOOTER ======= -->
@@ -497,3 +499,4 @@ fetch('/content/home.json')
 	
 
 </html>
+
