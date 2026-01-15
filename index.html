@@ -369,13 +369,37 @@
 </section>
 
 <script>
-fetch('/content/home.json')
+fetch('/content/recuadros.json')
   .then(res => res.json())
   .then(data => {
-    document.getElementById('titulo').innerText = data.titulo;
-    document.getElementById('subtitulo').innerText = data.subtitulo;
-    document.getElementById('boton').innerText = data.boton;
-  });
+    const container = document.querySelector('.recuadros-container');
+    container.innerHTML = ''; // limpia contenido fijo
+
+    data.forEach(item => {
+      const recuadro = document.createElement('div');
+      recuadro.classList.add('recuadro');
+      recuadro.style.background = '#f0f8ff';
+      recuadro.style.color = '#003366';
+
+      recuadro.innerHTML = `
+        <img src="${item.imagen}" alt="${item.titulo}">
+        <h3 class="recuadro-titulo">
+          <a href="${item.link}" target="_blank" style="text-decoration: none; color: #003366;">
+            ${item.titulo}
+          </a>
+        </h3>
+        <p class="recuadro-texto">
+          ${item.texto}
+        </p>
+        <button style="background: white; border: 2px solid #003366; color: #003366;">
+          ${item.boton}
+        </button>
+      `;
+
+      container.appendChild(recuadro);
+    });
+  })
+  .catch(err => console.error("Error cargando recuadros:", err));
 </script>
 	
 </body>
@@ -499,4 +523,5 @@ fetch('/content/home.json')
 	
 
 </html>
+
 
