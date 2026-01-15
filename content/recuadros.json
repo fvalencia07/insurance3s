@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "Elija su plan",
+    "texto": "Encuentre la cobertura que está buscando e inscríbase hoy mismo.",
+    "boton": "Compre e inscríbase",
+    "imagen": "/img/imagen1.png",
+    "link": "#"
+  },
+  {
+    "titulo": "Clases gratuitas",
+    "texto": "Únase a nosotros en cualquier momento para una clase gratuita de salud y bienestar.",
+    "boton": "Inscríbase ahora",
+    "imagen": "/img/imagen2.png",
+    "link": "#"
+  },
+  {
+    "titulo": "Pago en línea",
+    "texto": "Pague su factura o configure el pago automático.",
+    "boton": "Regístrese",
+    "imagen": "/img/imagen3.png",
+    "link": "#"
+  }
+]
