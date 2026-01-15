@@ -7,6 +7,7 @@ collections:
         file: "content/home.json"
         format: "json"
         fields:
-          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Título", name: "titulo-principal", widget: "string" }
           - { label: "Subtítulo", name: "subtitulo", widget: "text" }
           - { label: "Texto Botón", name: "boton", widget: "string" }
+
