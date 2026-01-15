@@ -244,15 +244,13 @@
     </style>
 </head>
 	
-	<script>
-fetch('content/home.md')
-  .then(res => res.text())
+<script>
+fetch('/content/home.json')
+  .then(res => res.json())
   .then(data => {
-    const content = Object.fromEntries(
-      [...data.matchAll(/(\w+):\s*"([^"]+)"/g)].map(m => [m[1], m[2]])
-    );
-
-    document.getElementById('titulo-principal').innerText = content.titulo_principal;
+    document.getElementById('titulo').innerText = data.titulo;
+    document.getElementById('subtitulo').innerText = data.subtitulo;
+    document.getElementById('boton').innerText = data.boton;
   });
 </script>
 
