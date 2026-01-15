@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "recuadros"
+    label: "Recuadros"
+    folder: "content"
+    create: false
+    slug: "{{title}}"
+    fields:
+      - {label: "Recuadros", name: "recuadros", widget: "list", fields: [
+          {label: "Título", name: "titulo", widget: "string"},
+          {label: "Texto", name: "texto", widget: "text"},
+          {label: "Botón", name: "boton", widget: "string"},
+          {label: "Imagen", name: "imagen", widget: "image"},
+          {label: "Link", name: "link", widget: "string"}
+        ]}
