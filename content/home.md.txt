@@ -1,0 +1,6 @@
+---
+titulo_principal: "La cobertura que cuida lo que más importa"
+subtitulo: "Su salud merece atención de calidad, cerca de casa y del trabajo."
+boton_texto: "Compre e inscríbase"
+boton_link: "https://tusformulario.com"
+---
